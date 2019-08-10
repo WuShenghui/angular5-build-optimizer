@@ -1,15 +1,20 @@
 # angular5-build-optimizer
-improve angular(5) build performance with webpack
 
-* Cache && Parallel
+improve angular(5) build performance with webpack, 3.x faster!
 
-```
+## Cache && Parallel
+
+webpack.prod.js
+
+``` 
 new UglifyJsPlugin({
    cache: true,
    parallel: true,
    ...
 })
 ```
+
+webpack.dev.js
 
 ```
 new HappyPack({
@@ -53,7 +58,9 @@ new HappyPack({
  }),
 ```
 
-* ignore large files
+## ignore large files
+
+webpack.prod.js
 
 ```
 new CopyWebpackPlugin([
@@ -64,3 +71,7 @@ new CopyWebpackPlugin([
   debug: 'warning'
 }
 ```
+
+## License
+
+#### [MIT](./LICENSE)
